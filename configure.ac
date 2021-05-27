@@ -324,7 +324,7 @@ AC_ARG_ENABLE([xlnx_pcie_xvc],
   [build_xlnx_pcie_xvc=$enableval], [build_xlnx_pcie_xvc=no])
 
 AS_CASE([$host_os],
-  [linux*], [],
+  [linux*|uclinux*], [],
   [
     AS_IF([test "x$build_sysfsgpio" = "xyes"], [
       AC_MSG_ERROR([sysfsgpio is only available on linux])
